@@ -2,26 +2,29 @@ class maths1:
   @staticmethod
   def add1():
     a=int(input("Enter 1 number-->"))
-    b=int(input("Enter 1 number-->"))
+    b=int(input("Enter 2 number-->"))
     print(a,"+",b,"=",a+b)
   @staticmethod
   def sub1():
     a=int(input("Enter 1 number-->"))
-    b=int(input("Enter 1 number-->"))
-    print(a,"-",b,"=",a-b)
+    b=int(input("Enter 2 number-->"))
+    if(a>b):
+      print(a,"-",b,"=",a-b)
+    else:
+      print(b,"-",a,"=",b-a)
   @staticmethod
   def mul1():
     a=int(input("Enter 1 number-->"))
-    b=int(input("Enter 1 number-->"))
+    b=int(input("Enter 2 number-->"))
     print(a,"X",b,"=",a*b)
   @staticmethod
   def div1():
     a=int(input("Enter 1 number-->"))
-    b=int(input("Enter 1 number-->"))
+    b=int(input("Enter 2 number-->"))
     print(a,"/",b,"=",a/b)
-print("===MATHS===\n\n1.Addtion\n2.Subtraction\n3.Multiplication\n4.Division\n5.Exit\n")
-n=int(input("Enter a number-->"))
 while True:
+  print("===MATHS===\n\n1.Addtion\n2.Subtraction\n3.Multiplication\n4.Division\n5.Exit\n")
+  n=int(input("Enter a number-->"))
   match(n):
     case 1:
       print("Addtion")
@@ -40,4 +43,4 @@ while True:
       break
   if(n<1 or n>5):
     print("Choses between 1-5\n")
-    
+    continue
