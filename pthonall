@@ -63,34 +63,38 @@ while True:
         break
   match(n):
     case 1:
-      print("Addtion")
+      print("\nAddtion")
       print(maths1.add1())
       n=input("Again(y/n)-->")
       if(n=="N" or n=="n"):
+        print(".\n.\n.\n.\n.\n.\nExited")
         break
       else:
         continue
     case 2:
-      print("Subtraction")
+      print("\nSubtraction")
       print(maths1.sub1())
       n=input("Again(y/n)-->")
       if(n=="N" or n=="n"):
+        print(".\n.\n.\n.\n.\n.\nExited")
         break
       else:
         continue
     case 3:
-      print("Multiplication")
+      print("\nMultiplication")
       print(maths1.mul1())
       n=input("Again(y/n)-->")
       if(n=="N" or n=="n"):
+        print(".\n.\n.\n.\n.\n.\nExited")
         break
       else:
         continue
     case 4:
-      print("Division")
+      print("\nDivision")
       print(maths1.div1())
       n=input("Again(y/n)-->")
       if(n=="N" or n=="n"):
+        print(".\n.\n.\n.\n.\n.\nExited")
         break
       else:
         continue
