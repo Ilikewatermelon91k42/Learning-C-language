@@ -1,0 +1,38 @@
+def set:
+  qaa=["what is 1+1=":"2","what is whale?(fish or animal":"animal"]
+def signin:
+  signinusers=[]
+  name=input("Enter your ID-->")
+  signinuser.append[name]
+  password=input("Enter your password-->")
+  signinuser.append[password]
+def login:
+loginusers=[]
+  while True:
+    username=input("Enter your ID-->")
+    loginusers.append[username]
+    userpassword=input("Enter your password-->")
+    loginusers.append[userpassword]
+    if(signinuser is loginuser):
+      break
+    else:
+      continue
+def main:
+userans=[]
+  for i in range(len(qaa)):
+    print("Qution"[i])
+    print(qaa.value[i])
+    ans=intput("Enter your answer-->").lower()
+    userans.append[ans]
+    if(ans==qaa.key[i]):
+      point+=1
+  print("Done")
+  for i in range(len(qaa)):
+    print("Qution"[i])
+    print(qaa.value[i])
+    print("your ans")
+    print(ans[i])
+    print("Real ans")
+    print(qaa.key[i])
+print(main)
+    
