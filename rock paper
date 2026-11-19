@@ -1,52 +1,75 @@
 #include <iostream>
 #include <random>
 using namespace std;
-
 int main() {
   random_device rd;
   mt19937 gen(rd());
   uniform_int_distribution<int>cpu(1,3);
   char wanna;
   int points=0;
+  int highscore=0;
   while(true){
-    cout<<"Welcome to Rock, Paper, Scissors game"<<endl<<endl;
+    cout<<"=========================================\n";
+    cout<<"Welcome to Rock, Paper, Scissors game"<<endl;
+    cout<<"Highscore is:"<<highscore<<endl;
+    cout<<"=========================================\n\n";
     points=0;
     while(true){
       int player=0;
       int CPU=cpu(gen);
       cout<<"1. Rock\n2. Paper\n3. Scissors\n\nEnter your choice-->";
       cin>>player;
-      if(player==CPU){
-        cout<<"Oops, it's a tie. Play again\n";
-        continue;
-      }else if(player==1 && CPU==2){
-        cout<<"CPU wins: paper beats rock\n";
-        break;
-      }else if(player==1 && CPU==3){
-        cout<<"Player wins: rock beats scissors\n";
-        points+=10;
-      }else if(player==2 && CPU==1){
-        cout<<"Player wins: paper beats rock\n";
-        points+=10;
-      }else if(player==2 && CPU==3){
-        cout<<"CPU wins: scissors beats paper\n";
-        break;
-      }else if(player==3 && CPU==1){
-        cout<<"CPU wins: rock beats scissors\n";
-        break;
-      }else if(player==3 && CPU==2){
-        cout<<"Player wins: scissors beats paper\n";
-        points+=10;
+      if(player>3 || player<1){
+          cout<<"\n#Invalid Input.Please try again\n";
+      }else{
+          if(player==CPU){
+            cout<<"#Oops, it's a tie. Play again\n";
+            continue;
+          }else if(player==1 && CPU==2){
+            cout<<"#CPU wins: paper beats rock\n";
+            break;
+          }else if(player==1 && CPU==3){
+            cout<<"#Player wins: rock beats scissors\n";
+            points+=10;
+          }else if(player==2 && CPU==1){
+            cout<<"#Player wins: paper beats rock\n";
+            points+=10;
+          }else if(player==2 && CPU==3){
+            cout<<"#CPU wins: scissors beats paper\n";
+            break;
+          }else if(player==3 && CPU==1){
+            cout<<"#CPU wins: rock beats scissors\n";
+            break;
+          }else if(player==3 && CPU==2){
+            cout<<"#Player wins: scissors beats paper\n";
+            points+=10;
+          }
       }
+        if(points>highscore){
+        highscore=points;
+        }
     }
-    cout<<endl<<"Wanna play again?(Y/N)-->";
-    cin>>wanna;
-    if(wanna=='Y' || wanna=='y'){
-      continue;
-    }else{
-      break;
+    cout<<endl<<"===============================";
+    cout<<endl<<"Your points are: "<<points;
+    cout<<endl<<"Your highscore is: "<<highscore;
+    cout<<endl<<"===============================";
+    while(true){
+        cout<<endl<<"\nWanna play again?(Y/N)-->";
+        cin>>wanna;
+        if(wanna=='Y' || wanna=='y'){
+            cout<<endl;
+          continue;
+        }else if(wanna=='N' || wanna=='n'){
+          break;
+        }else{
+            cout<<"\n#Invaild Input.Please try again\n";
+        }
     }
+    if(wanna=='N' || wanna=='n'){
+          cout<<endl<<"===============================";
+          cout<<endl<<"Your highscore is: "<<highscore;
+          break;
+        }
   }
-  cout<<endl<<"\nYour points are: "<<points;
-  return 0;
+return 0;
 }
