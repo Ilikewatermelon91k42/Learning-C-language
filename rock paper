@@ -58,9 +58,9 @@ int main() {
         cin>>wanna;
         if(wanna=='Y' || wanna=='y'){
             cout<<endl;
-          continue;
+            break;
         }else if(wanna=='N' || wanna=='n'){
-          break;
+            break;
         }else{
             cout<<"\n#Invaild Input.Please try again\n";
         }
@@ -69,7 +69,7 @@ int main() {
           cout<<endl<<"===============================";
           cout<<endl<<"Your highscore is: "<<highscore;
           break;
-        }
+    }
   }
 return 0;
 }
